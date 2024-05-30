@@ -1,4 +1,6 @@
 # disaster-sos
+
+### 投稿・返信 閲覧
 ```mermaid
 ---
 title: 【閲覧】
@@ -21,6 +23,8 @@ sequenceDiagram
     line_2 ->> line_1: スレッドを表示
   end
 ```
+
+### 投稿・返信 追加表示
 ```mermaid
 ---
 title: 【追加表示】
@@ -47,6 +51,8 @@ sequenceDiagram
     line_2 ->> line_1: 投稿詳細へスクロール
   end
 ```
+
+### 投稿・返信作成
 ```mermaid
 ---
 title: 【作成】
@@ -74,6 +80,7 @@ sequenceDiagram
   end
 ```
 
+### 投稿・返信 編集・削除
 ```mermaid
 ---
 title: 【編集・削除】
@@ -105,7 +112,7 @@ sequenceDiagram
   end
 ```
 
-
+### プロフィール閲覧・編集
 ```mermaid
 ---
 title: 【プロフィール閲覧・編集】
@@ -135,6 +142,7 @@ sequenceDiagram
   end
 ```
 
+### ログイン・ログアウト
 ```mermaid
 ---
 title: 【ログイン・ログアウト】
