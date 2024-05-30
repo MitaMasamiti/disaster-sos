@@ -1,4 +1,6 @@
-# disaster-sos
+# 災害SOS 詳細設計書
+
+## シーケンス図
 
 ### 投稿・返信 閲覧
 ```mermaid
