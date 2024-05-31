@@ -2,10 +2,9 @@
 ## ER図
 ```mermaid
 erDiagram
-    users ||--|| profiles  : ""
-    profiles ||--o{ posts : ""
+    users ||--o{ posts : ""
     posts ||--o{ replies : ""
-    profiles ||--o{ replies : ""
+    users ||--o{ replies : ""
 ```
 ## クラス図
 ```mermaid
