@@ -65,6 +65,9 @@ graph
   node_3 --> node_6
   node_3 --"プロフィール"--> node_7
   node_5 --> node_3
+  node_2 --"投稿作成"--> node_2
+  node_4 --"返信作成\n編集・削除"--> node_4
+  node_7 --"編集"--> node_7
 ```
 ## シーケンス図
 ### 投稿・返信 閲覧
