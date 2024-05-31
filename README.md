@@ -1,7 +1,72 @@
 # 災害SOS 詳細設計書
-
+## ER図
+```mermaid
+erDiagram
+    users ||--|| profiles  : ""
+    profiles ||--o{ posts : ""
+    posts ||--o{ replies : ""
+    profiles ||--o{ replies : ""
+```
+## クラス図
+```mermaid
+classDiagram
+  direction LR
+  class `ユーザ User` {
+    ユーザID
+    パスワード
+    名前
+    所属
+    read()
+    update()
+  }
+  class `投稿 Post` {
+    投稿ID
+    名前
+    内容
+    作成日時
+    更新日時
+    create()
+    read()
+    update()
+    delete()
+  }
+  class `返信 Reply` {
+    返信ID
+    名前
+    投稿
+    内容
+    作成日時
+    更新日時
+    create()
+    read()
+    update()
+    delete()
+  }
+  `ユーザ User`"1" -- "0..*"`投稿 Post`
+  `投稿 Post`"1" -- "0..*"`返信 Reply`
+  `ユーザ User`"1" -- "0..*"`返信 Reply`
+```
+## 画面遷移図
+```mermaid
+graph
+  node_1["ログイン"]
+  node_2["チャット"]
+  node_3["メニュー"]
+  node_4["スレッド"]
+  node_5["プロフィール"]
+  node_6["ログアウト"]
+  node_7["自分のプロフィール"]
+  node_4 --> node_3
+  node_1 --> node_2
+  node_2 --> node_3
+  node_2 --"投稿"--> node_4
+  node_2 --"名前"--> node_5
+  node_4 --"名前"--> node_5
+  node_3 --> node_6
+  node_3 --"プロフィール"--> node_7
+  node_5 --> node_3
+```
 ## シーケンス図
-
 ### 投稿・返信 閲覧
 ```mermaid
 ---
