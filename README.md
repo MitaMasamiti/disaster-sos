@@ -53,16 +53,17 @@ graph
   node_3["メニュー"]
   node_4["スレッド"]
   node_5["プロフィール"]
-  node_6["ログアウト"]
   node_7["自分のプロフィール"]
+  node_6["ログアウト"]
+  node_6 --"ログアウト"--> node_1
   node_4 --> node_3
   node_1 --> node_2
   node_2 --> node_3
   node_2 --"投稿"--> node_4
   node_2 --"名前"--> node_5
   node_4 --"名前"--> node_5
-  node_3 --> node_6
   node_3 --"プロフィール"--> node_7
+  node_3 --> node_6
   node_5 --> node_3
   node_2 --"投稿作成"--> node_2
   node_4 --"返信作成\n編集・削除"--> node_4
